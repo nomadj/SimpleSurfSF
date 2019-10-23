@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9324B9AB21CFCC46000EC5B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9324B9AA21CFCC46000EC5B6 /* AppDelegate.swift */; };
+		9324B9AD21CFCC46000EC5B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9324B9AC21CFCC46000EC5B6 /* ViewController.swift */; };
+		9324B9B021CFCC46000EC5B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9324B9AE21CFCC46000EC5B6 /* Main.storyboard */; };
+		9324B9B321CFCC46000EC5B6 /* SimpleSurf.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9324B9B121CFCC46000EC5B6 /* SimpleSurf.xcdatamodeld */; };
+		9324B9B521CFCC48000EC5B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9324B9B421CFCC48000EC5B6 /* Assets.xcassets */; };
+		9324B9B821CFCC48000EC5B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9324B9B621CFCC48000EC5B6 /* LaunchScreen.storyboard */; };
+		9324B9C021CFDB8D000EC5B6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9324B9BF21CFDB8D000EC5B6 /* Model.swift */; };
+		9ECFB66E7CE1C17F33F9C23D /* Pods_SimpleSurf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1898DFDCAD736FB0BCD02905 /* Pods_SimpleSurf.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1898DFDCAD736FB0BCD02905 /* Pods_SimpleSurf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleSurf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4726CD9AF1C4BF7002D57594 /* Pods-SimpleSurf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleSurf.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleSurf/Pods-SimpleSurf.release.xcconfig"; sourceTree = "<group>"; };
+		5481055042073D7FDD5FE093 /* Pods-SimpleSurf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleSurf.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleSurf/Pods-SimpleSurf.debug.xcconfig"; sourceTree = "<group>"; };
+		9324B9A721CFCC46000EC5B6 /* SimpleSurf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSurf.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9324B9AA21CFCC46000EC5B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9324B9AC21CFCC46000EC5B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9324B9AF21CFCC46000EC5B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9324B9B221CFCC46000EC5B6 /* SimpleSurf.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleSurf.xcdatamodel; sourceTree = "<group>"; };
+		9324B9B421CFCC48000EC5B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9324B9B721CFCC48000EC5B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9324B9B921CFCC48000EC5B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9324B9BF21CFDB8D000EC5B6 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9324B9A421CFCC46000EC5B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9ECFB66E7CE1C17F33F9C23D /* Pods_SimpleSurf.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		51881DC69CDF0EC0D7260C60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1898DFDCAD736FB0BCD02905 /* Pods_SimpleSurf.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9324B99E21CFCC45000EC5B6 = {
+			isa = PBXGroup;
+			children = (
+				9324B9A921CFCC46000EC5B6 /* SimpleSurf */,
+				9324B9A821CFCC46000EC5B6 /* Products */,
+				CDE3FC553226ACF68846FA7D /* Pods */,
+				51881DC69CDF0EC0D7260C60 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9324B9A821CFCC46000EC5B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9324B9A721CFCC46000EC5B6 /* SimpleSurf.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9324B9A921CFCC46000EC5B6 /* SimpleSurf */ = {
+			isa = PBXGroup;
+			children = (
+				9324B9AA21CFCC46000EC5B6 /* AppDelegate.swift */,
+				9324B9AC21CFCC46000EC5B6 /* ViewController.swift */,
+				9324B9BF21CFDB8D000EC5B6 /* Model.swift */,
+				9324B9AE21CFCC46000EC5B6 /* Main.storyboard */,
+				9324B9B421CFCC48000EC5B6 /* Assets.xcassets */,
+				9324B9B621CFCC48000EC5B6 /* LaunchScreen.storyboard */,
+				9324B9B921CFCC48000EC5B6 /* Info.plist */,
+				9324B9B121CFCC46000EC5B6 /* SimpleSurf.xcdatamodeld */,
+			);
+			path = SimpleSurf;
+			sourceTree = "<group>";
+		};
+		CDE3FC553226ACF68846FA7D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5481055042073D7FDD5FE093 /* Pods-SimpleSurf.debug.xcconfig */,
+				4726CD9AF1C4BF7002D57594 /* Pods-SimpleSurf.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9324B9A621CFCC46000EC5B6 /* SimpleSurf */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9324B9BC21CFCC48000EC5B6 /* Build configuration list for PBXNativeTarget "SimpleSurf" */;
+			buildPhases = (
+				60693CA3DD7FBC6FF25867E7 /* [CP] Check Pods Manifest.lock */,
+				9324B9A321CFCC46000EC5B6 /* Sources */,
+				9324B9A421CFCC46000EC5B6 /* Frameworks */,
+				9324B9A521CFCC46000EC5B6 /* Resources */,
+				84BFE5451A05353CB094650F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleSurf;
+			productName = SimpleSurf;
+			productReference = 9324B9A721CFCC46000EC5B6 /* SimpleSurf.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9324B99F21CFCC45000EC5B6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Bryan;
+				TargetAttributes = {
+					9324B9A621CFCC46000EC5B6 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 9324B9A221CFCC46000EC5B6 /* Build configuration list for PBXProject "SimpleSurf" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9324B99E21CFCC45000EC5B6;
+			productRefGroup = 9324B9A821CFCC46000EC5B6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9324B9A621CFCC46000EC5B6 /* SimpleSurf */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9324B9A521CFCC46000EC5B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9324B9B821CFCC48000EC5B6 /* LaunchScreen.storyboard in Resources */,
+				9324B9B521CFCC48000EC5B6 /* Assets.xcassets in Resources */,
+				9324B9B021CFCC46000EC5B6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		60693CA3DD7FBC6FF25867E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleSurf-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84BFE5451A05353CB094650F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SimpleSurf/Pods-SimpleSurf-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleSurf/Pods-SimpleSurf-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9324B9A321CFCC46000EC5B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9324B9B321CFCC46000EC5B6 /* SimpleSurf.xcdatamodeld in Sources */,
+				9324B9AD21CFCC46000EC5B6 /* ViewController.swift in Sources */,
+				9324B9AB21CFCC46000EC5B6 /* AppDelegate.swift in Sources */,
+				9324B9C021CFDB8D000EC5B6 /* Model.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9324B9AE21CFCC46000EC5B6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9324B9AF21CFCC46000EC5B6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9324B9B621CFCC48000EC5B6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9324B9B721CFCC48000EC5B6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9324B9BA21CFCC48000EC5B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9324B9BB21CFCC48000EC5B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9324B9BD21CFCC48000EC5B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5481055042073D7FDD5FE093 /* Pods-SimpleSurf.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NM6M6A2ZA5;
+				INFOPLIST_FILE = SimpleSurf/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bryan.SimpleSurf;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9324B9BE21CFCC48000EC5B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4726CD9AF1C4BF7002D57594 /* Pods-SimpleSurf.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NM6M6A2ZA5;
+				INFOPLIST_FILE = SimpleSurf/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bryan.SimpleSurf;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9324B9A221CFCC46000EC5B6 /* Build configuration list for PBXProject "SimpleSurf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9324B9BA21CFCC48000EC5B6 /* Debug */,
+				9324B9BB21CFCC48000EC5B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9324B9BC21CFCC48000EC5B6 /* Build configuration list for PBXNativeTarget "SimpleSurf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9324B9BD21CFCC48000EC5B6 /* Debug */,
+				9324B9BE21CFCC48000EC5B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9324B9B121CFCC46000EC5B6 /* SimpleSurf.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9324B9B221CFCC46000EC5B6 /* SimpleSurf.xcdatamodel */,
+			);
+			currentVersion = 9324B9B221CFCC46000EC5B6 /* SimpleSurf.xcdatamodel */;
+			path = SimpleSurf.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 9324B99F21CFCC45000EC5B6 /* Project object */;
+}
