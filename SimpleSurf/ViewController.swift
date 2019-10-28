@@ -48,7 +48,32 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         pickedLocation = surfSpot[0]
         print(pickedTime)
         print(pickedLocation)
+        dateConvert()
+        print(dayArray)
         getData(url: lindaMarForecast, parameters: parameters)
+    }
+    
+    func dateConvert() {
+        let currentDate = NSDate()
+        //let dateComponents = NSDateComponents()
+        let dateFormatter = DateFormatter()
+        //let calendar = NSCalendar.current
+        //let day = dateComponents.day
+        var loopVar = 1
+        //let dateComponent = calendar.component(.day, from: currentDate as Date)
+        //let tomorrow = Calendar.current.date(byAdding: .day, value: loopVar, to: currentDate as Date)
+        dateFormatter.locale = NSLocale.current
+        dateFormatter.dateStyle = DateFormatter.Style.full
+        var convertedDate = dateFormatter.string(from: currentDate as Date)
+        dateFormatter.dateFormat = "EEE"
+        convertedDate = dateFormatter.string(from: currentDate as Date)
+        dayArray.append(convertedDate)
+        while dayArray.count < 7 {
+            let tomorrow = Calendar.current.date(byAdding: .day, value: loopVar, to: currentDate as Date)
+            convertedDate = dateFormatter.string(from: tomorrow as! Date)
+            dayArray.append(convertedDate)
+            loopVar += 1
+        }
     }
     
     //MARK: pickerView protocol methods
@@ -76,20 +101,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         }
             //TODO: populate component 1 and 2 with JSON data
         else if component == 1 {
-            let currentDate = NSDate()
-            let dateFormatter = DateFormatter()
-            dateFormatter.locale = NSLocale.current
-            dateFormatter.dateStyle = DateFormatter.Style.full
-            var convertedDate = dateFormatter.string(from: currentDate as Date)
-            dateFormatter.dateFormat = "EEE"
-            convertedDate = dateFormatter.string(from: currentDate as Date)
-            dayArray.append(convertedDate)
-            while dayArray.count < 7 {
-                let tomorrow = Calendar.current.date(byAdding: .day, value: loopVar, to: currentDate as Date)
-                convertedDate = dateFormatter.string(from: tomorrow as! Date)
-                dayArray.append(convertedDate)
-                loopVar += 1
-            }
+            
+            print(dayArray)
             return dayArray[row]
         }
         else {
@@ -107,6 +120,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             
         // TODO: enable component 1
         else if component == 2 {
+            timeInteger = row + 6
             pickedTime = time[row]
             updateSurfData(json: spotJSON)
 //            let finalURL = baseURL + "\(model.spotID(spot: pickedLocation))"
