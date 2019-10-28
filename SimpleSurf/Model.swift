@@ -34,7 +34,7 @@ class Model {
     
     func dayIndex(day: String) -> Int {
         switch day {
-        case "Sun" : return 1; case "Mon" : return 2; case "Tue" : return 3; case "Wed" : return 4
+        case "" : return 1; case "Mon" : return 2; case "Tue" : return 3; case "Wed" : return 4
         case "Thu" : return 5; case "Fri" : return 6
         default : return 7
         }

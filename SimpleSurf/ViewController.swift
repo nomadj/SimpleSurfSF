@@ -21,17 +21,21 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     let time = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", "8pm"]
     var day : [String] = []
     var dayParsed : [String] = []
-    var dayArray : [[String]] = [[]]
+    var dayArray : [String] = []
     var daysOnly : [String] = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
     var JSONDate = ""
     var pickedTime = ""
     var pickedLocation = ""
+    var pickedDay = ""
     let baseURL = "http://api.spitcast.com/api/spot/forecast/"
     let lindaMarForecast = "http://api.spitcast.com/api/spot/forecast/120/"
     let princetonJettyForecast = "http://api.spitcast.com/api/spot/forecast/123/"
     let parameters = ["dcat" : "week"]
     var spotJSON : JSON = []
     var surfJSON : JSON = []
+    var dayInteger = 0
+    var timeInteger = 0
+    var loopVar = 1
 //    let URL = "https://www.ncdc.noaa.gov/cdo-web/api/v2/locations/FIPS:06"
 //    let token = ["token" : "CzEuEErYJEOTbkIeRYSSCiRXntQTKEMx"]
     //MARK: viewDidLoad
@@ -59,7 +63,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         }
         else if component == 1 {
 
-            return daysOnly.count
+            return dayArray.count
         }
         else {
             return time.count
@@ -72,8 +76,21 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         }
             //TODO: populate component 1 and 2 with JSON data
         else if component == 1 {
-            
-            return daysOnly[row]
+            let currentDate = NSDate()
+            let dateFormatter = DateFormatter()
+            dateFormatter.locale = NSLocale.current
+            dateFormatter.dateStyle = DateFormatter.Style.full
+            var convertedDate = dateFormatter.string(from: currentDate as Date)
+            dateFormatter.dateFormat = "EEE"
+            convertedDate = dateFormatter.string(from: currentDate as Date)
+            dayArray.append(convertedDate)
+            while dayArray.count < 7 {
+                let tomorrow = Calendar.current.date(byAdding: .day, value: loopVar, to: currentDate as Date)
+                convertedDate = dateFormatter.string(from: tomorrow as! Date)
+                dayArray.append(convertedDate)
+                loopVar += 1
+            }
+            return dayArray[row]
         }
         else {
             return time[row]
@@ -97,7 +114,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         }
         
         else {
-            
+            pickedDay = dayArray[row]
+            dayInteger = row * 24
+            updateSurfData(json: spotJSON)
         }
     }
     //MARK: API Request
@@ -121,27 +140,13 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     //MARK: Data Update
     func updateSurfData(json : JSON) {
-        
-        if let waveHeight = json[model.timeIndex(time: pickedTime)]["size"].int {
-            let hour = json[model.timeIndex(time: pickedTime)]["hour"]
-            let spot = json[model.timeIndex(time: pickedTime)]["spot_name"]
-            var JSONInt = 0
-    
-            while JSONInt < 144 {
-                JSONInt += 24
-                day.append(json[JSONInt]["day"].string!)
-            }
-            for date in day {
-                self.dayParsed = (date.components(separatedBy: " "))
-                dayArray.append(self.dayParsed)
-            }
-            dayArray.remove(at: 0)
-            for array in dayArray {
-                if daysOnly.count < 7 {
-                    daysOnly.append(array[0])
-                }
-            }
-            label.text = "Wave Height: \(waveHeight) feet \nTime: \(hour) \nLocation: \(spot)"
+        let jsonInt = dayInteger + timeInteger
+        if let waveHeight = json[jsonInt]["size"].int {
+            let daypicked = json[jsonInt]["day"]
+            let hour = json[jsonInt]["hour"]
+            let spot = json[jsonInt]["spot_name"]
+            
+            label.text = "Wave Height: \(waveHeight) feet\nDay: \(daypicked)\nTime: \(hour)\nLocation: \(spot)"
         }
         else {
             label.text = "Fuck!!"
