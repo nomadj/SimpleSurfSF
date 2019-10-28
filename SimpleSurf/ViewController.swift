@@ -160,7 +160,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             let hour = json[jsonInt]["hour"]
             let spot = json[jsonInt]["spot_name"]
             
-            label.text = "Wave Height: \(waveHeight) feet\nDay: \(daypicked)\nTime: \(hour)\nLocation: \(spot)"
+            label.text = "Wave Height - \(waveHeight) feet\nDay - \(daypicked)\nTime - \(hour)\nLocation - \(spot)"
         }
         else {
             label.text = "Fuck!!"
