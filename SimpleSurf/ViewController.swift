@@ -34,7 +34,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     var spotJSON : JSON = []
     var surfJSON : JSON = []
     var dayInteger = 0
-    var timeInteger = 0
+    var timeInteger = 6
     var loopVar = 1
 //    let URL = "https://www.ncdc.noaa.gov/cdo-web/api/v2/locations/FIPS:06"
 //    let token = ["token" : "CzEuEErYJEOTbkIeRYSSCiRXntQTKEMx"]
@@ -159,8 +159,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             let daypicked = json[jsonInt]["day"]
             let hour = json[jsonInt]["hour"]
             let spot = json[jsonInt]["spot_name"]
+            let conditions = json[jsonInt]["shape_full"]
             
-            label.text = "Wave Height - \(waveHeight) feet\nDay - \(daypicked)\nTime - \(hour)\nLocation - \(spot)"
+            label.text = "Day -> \(daypicked)\nTime -> \(hour)\nLocation -> \(spot)\nWave Height -> \(waveHeight)-\(waveHeight + 1) feet\nConditions -> \(conditions)"
         }
         else {
             label.text = "Fuck!!"
