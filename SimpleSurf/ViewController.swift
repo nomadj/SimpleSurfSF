@@ -16,7 +16,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var label: UILabel!
     
     let model = Model()
-    let surfSpot = ["LM", "HMB", "OB", "Bol", "PP", "Hook", "Jacks", "SL"]
+    let surfSpot = ["LM", "HMB", "OB", "Bol", "Point", "Hook", "38th", "Lane"]
     //let surfSpot = ["Linda Mar", "Princeton Jetty", "OB - Sloat", "Bolinas", "Pleasure Point", "The Hook", "Jack's House", "Steamers"]
     let time = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", "8pm"]
     var day : [String] = []
@@ -148,23 +148,22 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
                     
                 } else {
                     print("Error: \(String(describing: response.result.error))")
-                    self.label.text = "Connection Issues"
+                    self.label.text = "No connection, just go surf"
                 }
         }
     }
     //MARK: Data Update
     func updateSurfData(json : JSON) {
         let jsonInt = dayInteger + timeInteger
-        if let waveHeight = json[jsonInt]["size"].int {
+        if let waveHeight = json[jsonInt]["size"].int, let conditions = json[jsonInt]["shape_full"].string {
             let daypicked = json[jsonInt]["day"]
             let hour = json[jsonInt]["hour"]
             let spot = json[jsonInt]["spot_name"]
-            let conditions = json[jsonInt]["shape_full"]
-            
-            label.text = "Day -> \(daypicked)\nTime -> \(hour)\nLocation -> \(spot)\nWave Height -> \(waveHeight)-\(waveHeight + 1) feet\nConditions -> \(conditions)"
+            label.numberOfLines = 5
+            label.text = "Day  📆  \(daypicked)\nTime  🕓  \(hour)\nLocation  🏝  \(spot)\nWave Height  \(model.waveHeightEmoji(int: waveHeight))  \(waveHeight)-\(waveHeight + 1) feet\nConditions  \(model.conditionsEmoji(string: conditions))  \(conditions)"
         }
         else {
-            label.text = "Fuck!!"
+            label.text = "No connection, just go surf"
         }
         
     }

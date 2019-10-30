@@ -39,4 +39,22 @@ class Model {
         default : return 7
         }
     }
+    
+    func conditionsEmoji(string: String) -> String {
+        switch string {
+        case "Good" : return "🤙🏽"; case "Fair-Good" : return "💪🏽"; case "Fair" : return "👍🏽"
+        case "Poor-Fair" : return "👌🏽"; case "Poor" : return "🖕🏽"
+        default : return "👉🏽"
+        }
+    }
+    
+    func waveHeightEmoji(int: Int) -> String {
+        switch int {
+        case 0...2 : return "🧘🏽‍♀️"; case 3...5 : return "🏄🏽‍♂️"; case 6...10 : return "🌊"
+        case _ where int > 10 : return "💀"
+        default : return "👉🏽"
+        }
+    }
+    
+    
 }
